@@ -7,8 +7,7 @@ void inputArray(int* &a, int &n) {
 	cin >> n;
 	a = new int[n];
 	cout << "\nLan luot nhap cac phan tu trong mang\n";
-	for (int i = 0; i < n; i++)
-	{
+	for (int i = 0; i < n; i++){
 		cout << "Nhap phan tu thu " << i + 1 << ": ";
 		cin >> a[i];
 	}
@@ -38,8 +37,7 @@ int findMaxModulus(int *a, int n) {
 	int id = 0,
 		max_module = std::abs(a[id]);
 	for (int i = 0; i < n; i++)
-		if (std::abs(a[i]) > max_module)
-		{
+		if (std::abs(a[i]) > max_module){
 			max_module = std::abs(a[i]);
 			id = i;
 		}
