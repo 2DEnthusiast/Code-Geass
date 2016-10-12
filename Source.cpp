@@ -128,25 +128,13 @@ int stringLength(char s[]) {
 	return stringLength(s + 1) + 1;
 }
 
-int ack(int m, int n)
-{
+int ack(int m, int n){
 	if (m == 0)
-	{
 		return n + 1;
-	}
 	else if (m > 0 && n == 0)
-	{
 		return ack(m - 1, 1);
-	}
 	else if (m > 0 && n>0)
-	{
-		int x = ack(m, n - 1);
-		return ack(m - 1, x);
-	}
-	else
-	{
-		cout << "did not worked properly";
-	}
+		return ack(m - 1, ack(m, n - 1));
 }
 
 // Struct
